@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('fonts/Lato-Light.eot?') format('eot'), 
+         url('fonts/Lato-Light.woff') format('woff'), 
+         url('fonts/Lato-Light.ttf')  format('truetype'),
+         url('fonts/Lato-Light.svg#Lato-Light') format('svg');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('fonts/Lato-Regular.eot?') format('eot'), 
+         url('fonts/Lato-Regular.woff') format('woff'), 
+         url('fonts/Lato-Regular.ttf')  format('truetype'),
+         url('fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('fonts/Lato-Bold.eot?') format('eot'), 
+         url('fonts/Lato-Bold.woff') format('woff'), 
+         url('fonts/Lato-Bold.ttf')  format('truetype'),
+         url('fonts/Lato-Bold.svg#Lato-Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'CaviarDreams-Bold';
+    src: url('fonts/CaviarDreams-Bold.eot?') format('eot'), 
+         url('fonts/CaviarDreams-Bold.woff') format('woff'), 
+         url('fonts/CaviarDreams-Bold.ttf')  format('truetype'),
+         url('fonts/CaviarDreams-Bold.svg#CaviarDreams-Bold') format('svg');
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+body {
+    line-height: 1;
+    background:#FFF;
+    -webkit-font-smoothing: antialiased;
+}
+body, input, textarea, select
+  {
+    font-family: 'Lato-Light', Arial, 'microsoft yahei', '微软雅黑', 'SimHei', '中易黑体', sans-serif;
+  }
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    text-decoration:none;
+    color: inherit;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* Chrome Frame prompt  */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*Display*/
+.block{display:block;}
+.inline{display:inline;}
+.hide{display:none;}
+.inline-block{display:inline-block; *display: inline; *zoom:1;}
+
+/*Positioning*/
+.center{margin:0 auto;}
+.float-left{float:left;}
+.float-right{float:right;}
+.clear-left{clear:right;}
+.clear-right{clear:left;}
+.clear-both{clear:both;}
+.relative{position:relative;}
+.absolute{position:absolute;}
+.fixed{position:fixed;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.no-space {margin: 0; padding: 0;}
+.under-line {text-decoration: underline;}
+.bold {font-family: 'Lato-Bold', Arial, 'microsoft yahei', '微软雅黑', 'SimHei', '中易黑体', sans-serif;}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/*text styles --------------------------*/
+h1{
+font-size:2.5em;
+}
+h2{
+font-size:1.25em;
+}
+h3{
+font-size:1.125em;
+}
+h4{
+font-size:1em;
+}
+h5{
+font-size:0.875em;
+}
+h6{
+font-size:0.75em;
+}
+p{
+font-size:0.875em;
+}
+
+h1, h2, h3,  h4, h5, h6 { margin-bottom: 0.4em; color: inherit;}
+
+strong, b, p { margin-bottom: 0.8em; color: inherit;}
+
+
+/*********************************************************************************/
+/* Custom CSS                                                                    */
+/*********************************************************************************/
+
+
+
+/*********************************************************************************/
+/* Responsive                                                                    */
+/*********************************************************************************/
+
+@media only screen and (min-width: 321px)  {
+    nav {
+        height: 21.875em;
+        background: url("../images/navBg320+.jpg") no-repeat;
+    }
+    nav .navWrap {
+        text-align: center;
+    }
+    nav .navbar {
+      padding-top: 2.5em;
+    }
+    nav .navbar ul li {
+      padding-bottom: 0.975em;
+    }
+    header p {
+        font-size: 1.5625em;
+    }
+    main .content {
+        width: 100%;
+    }
+    .content section h2 {
+        margin-top: 2.125em;
+    }
+    .filter {
+        margin-top: 1.875em;
+    }
+    #news {
+        height: 7.5em;
+    }
+    #news .inputGroup {
+        width: 17em;
+    }
+    #news .inputGroup .inputWrap {
+        margin-top: 1.125em;
+        margin-left: 0.625em;
+    }
+}
+
+@media only screen and (min-width: 639px) {
+    nav {
+        height: 18.75em; 
+        background: url("../images/navBg640+.jpg") no-repeat;
+    }
+    nav .navbar {
+        display: block;
+        padding-top: 6.125em;
+    } 
+    nav .navbar ul li, .content section.title ul li {
+      display: inline-block;
+    }
+    header p {
+        font-size: 2.5em;
+    }
+    .content section.title ul li {
+        width: 48.6111%;
+    }
+    #news {
+        height: 3.75em;
+        line-height: 3.75em;
+    }
+    #news .inputGroup {
+        width: 33.25em;
+    }
+    #news .inputGroup .inputWrap {
+        margin-top: 0.5em;
+        margin-left: 0.375em;
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+    nav {
+        background: url("../images/navBg1024+.jpg") no-repeat;
+    }
+    nav .navWrap {
+      width: 64em;
+      text-align: left;
+    }
+    nav .navbar {
+      display: inline-block;
+      float: right;
+      padding-top: 2.625em;
+    } 
+    nav .navbar ul li {
+      display: inline-block;
+    }
+    main .content {
+        width: 79.0323%;
+    }
+    .content {
+        float: left;
+    }
+    .content section h2.firstTitle {
+        margin-top: 0;
+    }
+    .filter {
+        width: 19.3548%;
+        float: right;
+        margin-top: 0;
+    }
+    .contentWrap {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1279px) {
+   
+}
+
+nav {
+    width: 100%;
+    padding: 1.875em 1.3125em 0 1.3125em;
+    background-size: cover;
+}
+nav .navWrap {
+    margin: 0 auto;
+}
+nav .navbar .navbarMenu  {
+    color: #fff;
+}
+nav .navbar .navbarMenu .active  {
+    color: #c30000;
+}
+nav .navbar ul li {
+    margin: 0 0.8em 0 0.8em;
+    font-family: CaviarDreams-Bold;
+    font-size: 1.25em;
+}
+header {
+    width: 100%;
+    height: 14.125em;
+    padding-top: 3.125em;
+    background: #c30000;
+    color: #fff;
+    font-family: CaviarDreams-Bold;
+    text-align: center;
+    line-height: 2.1em;
+    position: relative;
+}
+header .bigImgLogo {
+    width: 7.1em;
+    height: 7em;
+    background: url("../images/icon.png") no-repeat;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    margin-left: -3.55em;
+    margin-bottom: -3.5em;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 6em 1.25em 2.5em 1.25em;
+    color: #404040;
+}
+main > p {
+    width: 100%;
+    text-align: center;
+    font-family: CaviarDreams-Bold;
+    font-size: 1.894375em;
+}
+main > p:before {
+    content: '';
+    display: block;
+    width: 1.866875em;
+    height: 0.09375em;
+    background: #404040;
+    margin: 0 auto;
+    margin-bottom: 0.625em;
+
+}
+main .content {
+    position: relative;
+}
+main .content section {
+    position: relative;
+    width: 100%;
+}
+main .content section video {
+    width: 100%;
+    height: 21.875em;
+}
+.content section h2 {
+    color: #c30000;
+    font-family: CaviarDreams-Bold;
+}
+.content section p, .content section ul, .content .title ul li article  {
+    font-family: Lato-Light;
+    font-size: 1.25em;
+    padding-top: 0.3em;
+    line-height: 1.2em;
+}
+.content section a p {
+    font-family: Lato-Bold;
+    font-size: 1.25em;
+    padding-bottom: 0.375em;
+}
+.content section ul {
+    /*list-style: disc;
+    margin-left: 1.1em;*/
+    padding-top: 0.175em;
+}
+.content section.listItem ul li {
+    padding-bottom: 0.54em;
+}
+.content section.listItem ul li:before {
+    content: "";
+    display: inline-block;
+    width: 0.275em;
+    height: 0.275em;
+    border-radius: 50%;
+    background: #404040;
+    margin-right: 0.725em;
+    vertical-align: middle;
+}
+.content section.listItem .button  {
+    margin-top: 1.725em;
+    width: 12.25em;
+    height: 2.6em;
+    border-radius: 0.25em;
+    border: 0.125em solid #404040;
+    text-align: center;
+    line-height: 2em;
+}
+.content section .button span {
+    font-size: 1.25em;
+    font-family: Lato-Regular;
+}
+.content section.title ul li.secondLi {
+    margin-left: 2.2%;
+}
+.content section.title ul {
+    font-size: 1em;
+} 
+.content .title img {
+    width: 100%;
+    height: 16.875em;
+} 
+.content .title .button {
+    width: 5.375em;
+    height: 2.125em;
+    border-radius: 0.25em;
+    border: 0.125em solid #404040;
+    text-align: center;
+    line-height: 2em;
+    margin-top: 1.35em;
+    float: right;
+}
+.content section.title .button span {
+    font-size: 1em;
+    font-family: Lato-Bold;
+}
+#news {
+    width: 100%;
+    /*height: 3.75em;
+    line-height: 3.75em;*/
+    background: #c30000;
+}
+#news > form {
+    height: 100%;
+}
+.inputGroup {
+    width: 33.25em;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inputGroup label {
+    color: #fff;
+    font-size: 1.25em;
+    font-family: Lato-Regular;
+    float: left;
+}
+.inputWrap {
+    width: 15.75em;
+    height: 2.6875em;
+    display: inline-block;
+    float: left;
+    padding-right: 0.375em;
+    border: 0.125em solid #980000;
+    border-radius: 0.325em;
+    background: #fff;
+}
+.inputWrap input[type="text"] {
+    width: 82%;
+    height: 93%;
+    margin-top: 0.1em;
+    margin-left: 0.625em;
+    font-size: 1em;
+    color: #c30000;
+    position: relative;
+    float: left;
+    border: none;
+}
+
+::-moz-placeholder { color: #c30000; }
+::-webkit-input-placeholder { color:#c30000; }
+:-ms-input-placeholder { color:#c30000; }
+.inputGroup input[type="hidden"] {
+    display: none;
+}
+.submitBtn {
+    height: 100%;
+    width: 1.8em;
+    background: url("../images/submitBtn.png") no-repeat 0 center;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+footer {
+    width: 100%;
+    height: 20em;
+    padding-top: 2em;
+    padding-bottom: 2.25em;
+    background: #292929;
+    font-family: CaviarDreams-Bold;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    text-align: center;
+}
+footer p {
+    letter-spacing: 0.1em;
+}
+footer .iconLink {
+    width: 20em;
+    height: 3.625em;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+footer .iconLink a {
+    display: inline-block;
+    width: 4.79375em;
+    height: 4.63125em;
+    background-size: 4.79375em 4.63125em;
+    margin: 0 0.625em;
+}
+a[title="Follow us in Linkedin"] {
+    background: url("../images/linkedin.png");
+}
+a[title="Follow us in Facebook"] {
+    background: url("../images/fb.png");
+}
+a[title="Follow us in Twitter"] {
+    background: url("../images/twitter.png");
+}
+.filter {
+    font-family: CaviarDreams-Bold;
+    font-size: 1.125em;
+    text-align: center;
+}
+.filter ul li {
+    color: #404040;
+    background: #f6f6f6;
+    border-bottom: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    height: 2.5em;
+    line-height: 2.5em;
+}
+.filter ul .seleted {
+    color: #fff;
+    background: #c30000;
+    border: 1px solid #c30000;
+}
